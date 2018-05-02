@@ -1,0 +1,218 @@
+$icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/bootstrap/";
+// bower:scss
+@import "bootstrap-sass-official/assets/stylesheets/_bootstrap.scss";
+// endbower
+
+.browsehappy {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0;
+}
+
+body {
+  padding: 0;
+}
+
+/* Everything but the jumbotron gets side spacing for mobile first views */
+.header,
+.marketing,
+.footer {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+/* Custom page header */
+.header {
+  border-bottom: 1px solid #e5e5e5;
+  margin-bottom: 10px;
+
+  /* Make the masthead heading the same height as the navigation */
+  h3 {
+    margin-top: 0;
+    margin-bottom: 0;
+    line-height: 40px;
+    padding-bottom: 19px;
+  }
+}
+
+/* Custom page footer */
+.footer {
+  padding-top: 19px;
+  color: #777;
+  border-top: 1px solid #e5e5e5;
+}
+
+.container-narrow > hr {
+  margin: 30px 0;
+}
+
+/* Main marketing message and sign up button */
+.jumbotron {
+  text-align: center;
+  border-bottom: 1px solid #e5e5e5;
+
+  .btn {
+    font-size: 21px;
+    padding: 14px 24px;
+  }
+}
+
+/* Supporting marketing content */
+.marketing {
+  margin: 40px 0;
+
+  p + h4 {
+    margin-top: 28px;
+  }
+}
+
+/* Responsive: Portrait tablets and up */
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 730px;
+  }
+
+  /* Remove the padding we set earlier */
+  .header,
+  .marketing,
+  .footer {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  /* Space out the masthead */
+  .header {
+    margin-bottom: 30px;
+  }
+  /* Remove the bottom border on the jumbotron for visual effect */
+  .jumbotron {
+    border-bottom: 0;
+  }
+}
+
+
+// Custom header CSS
+.header #picture-title {
+  display: table;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+.header #fancy-title {
+  float: left;
+  height: 100%;
+  width: 75%;
+}
+
+
+.header #buffer {
+  height: 10%;
+  width: 100%;
+}
+
+.header #main-title {
+  height: 50%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.header h1 {
+  padding-left: 20px;
+  text-align: left;
+  font-size:50px;
+}
+
+.header #subtitle {
+  height: 35%;
+  width: 100%;
+}
+
+.header h2 {
+  padding-left: 20px;
+  text-align: left;
+}
+
+.body .prof-images {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+
+.body .prof-images .prof-image {
+  float: left;
+  width: 25%;
+  align-items: center;
+  justify-content: center;
+}
+
+.body .prof-images .prof-image .a .img {
+  display: block;
+  margin: auto;
+}
+
+.about-body {
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+}
+
+.about-section {
+  clear:both;
+  width: 100%;
+}
+
+.about-section .about-img {
+  width: 30%;
+  float: left;
+  padding: 10px;
+}
+
+.about-section .about-txt {
+  width: 60%;
+  float: left;
+  padding: 10px;
+}
+
+.navbar-toggle {
+    z-index:3;
+}
+
+.form {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+    margin-bottom: 5px;
+}
+
+.form .row {
+    margin-bottom: -15px;
+}
+.next {
+    background-color: #4CAF50;
+    color: white;
+    border-radius: 4px;
+    width: 30%;
+    display: flex;
+    height: 100%;
+}
+
+.next:hover {
+    background-color: #45a049;
+}
+
+.navbar-nav navbar-right {
+    width: 100%;
+    display: inline-block;
+    text-align: center;
+    padding: 0;
+    list-style: none;
+    background-color: #f2f2f2;
+    border-bottom: 1px solid #ccc;
+    border-top: 1px solid #ccc;
+    margin-left: 0px;  // looks like bootstrap is putting a left margin on your #nav you may want it off.
+}

@@ -1,0 +1,41 @@
+<div ng-controller="LanguageSelectionCtrl">
+  Change Language?
+  <select ng-init=""
+          ng-model="lang"
+          ng-options="option for option in languageOptions"
+          ng-change="setLang(lang)"
+  >
+  </select>
+</div>
+
+<h2>{{demo.prompts.medications[lang]}}</h2>
+
+<div class="form-group">
+  <label class="control-label">Filter:
+    <input ng-model="demo.filter" class="form-control">
+  </label>
+</div>
+<div class="pre-scrollable">
+  <div ng-repeat="key in demo.medicationNames | filter:demo.filter" class="form-check">
+    <label class="form-check-label">
+      <input type="checkbox" ng-model="demo.medications[key]" class="form-check-input"/> {{key}}
+    </label>
+  </div>
+</div>
+
+<nav class="navbar navbar-default" role="navigation">
+  <div class="navbar-header">
+    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+  </div>
+  <div class="navbar-collapse collapse">
+    <ul class="nav navbar-nav navbar-left">
+      <li><a href="#" class="restart" ng-click="$root.lang = $root.langDef">{{textLang.restart[lang]}}</a></li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right next">
+      <li><a href="#!/demo/hazards" ng-click="setRootMult(demo.medications, 'medications')">{{textLang.next[lang]}}</a></li>
+    </ul>
+  </div>
+</nav>

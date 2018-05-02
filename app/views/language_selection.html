@@ -1,0 +1,30 @@
+<div ng-repeat="key in language_selection.prompt">
+    <h2>{{key}}</h2>
+</div>
+
+<div class="form-group">
+  <select ng-init="language_selection.language = language_selection.languageOptions[0]"
+          ng-model="language_selection.language"
+          ng-options="option for option in language_selection.languageOptions"
+          ng-change="setLang(language_selection.language)"
+          class="form-control">
+  </select>
+</div>
+
+<nav class="navbar navbar-default" role="navigation">
+  <div class="navbar-header">
+    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+  </div>
+
+  <div class="navbar-collapse collapse">
+    <ul class="nav navbar-nav navbar-left">
+      <li><a href="#" class="restart" ng-click="$root.lang = $root.langDef">{{textLang.restart[lang]}}</a></li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right next">
+      <li><a href="#!/demo/personal_information" ng-click="setLang(language_selection.language)">{{textLang.begin[lang]}}</a></li>
+    </ul>
+  </div>
+</nav>
