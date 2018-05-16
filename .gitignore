@@ -1,7 +1,8 @@
-/node_modules
-/.idea
-/.sass-cache
-/bower_components
+node_modules/
+.idea/
+.idea/
+.sass-cache/
+bower_components/
 
 *#
 *~
